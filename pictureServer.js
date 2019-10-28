@@ -19,6 +19,15 @@ served from. You will also need to include the serial port address as a command
 line input.
 */
 
+function sleep(milliseconds) {
+   var start = new Date().getTime();
+   for (var i=0; i < 1e7; i++) {
+     if ((new Date().getTime() - start) > milliseconds){
+       break;
+      }
+   }
+}
+
 var express = require('express'); // web server application
 var app = express(); // webapp
 var http = require('http').Server(app); // connects http library to server
@@ -111,10 +120,13 @@ io.on('connect', function(socket) {
   });
 
   //-- Addition: This function is called when the client clicks on the `Take a picture` button.
-  socket.on('takePicture', function() {
+ 
+socket.on('takePicture', function() {
+  
     /// First, we create a name for the new picture.
     /// The .replace() function removes all special characters from the date.
     /// This way we can use it as the filename.
+    sleep(10000);
     var imageName = new Date().toString().replace(/[&\/\\#,+()$~%.'":*?<>{}\s-]/g, '');
 
     console.log('making a making a picture at'+ imageName); // Second, the name is logged to the console.
