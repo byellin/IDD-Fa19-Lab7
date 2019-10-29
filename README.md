@@ -14,6 +14,15 @@
 
 [Video Link](https://youtu.be/4J-cAtJFAm8)
 
+This is a link to my video doorbell (Same as link in C). Once I got the rest of the lab to work the code stopped properly running from Arduino. I was getting the following error message: 
+
+Sketch uses 2066 bytes (6%) of program storage space. Maximum is 32256 bytes.
+Global variables use 201 bytes (9%) of dynamic memory, leaving 1847 bytes for local variables. Maximum is 2048 bytes.
+avrdude: ser_open(): can't open device "/dev/cu.SLAB_USBtoUART": No such file or directory
+Problem uploading to board.  See http://www.arduino.cc/en/Guide/Troubleshooting#upload for suggestions.
+
+
+
 ## Part B. Web Camera
 
 **a. Compare `helloYou/server.js` and `IDD-Fa18-Lab7/pictureServer.js`. What elements had to be added or changed to enable the web camera? (Hint: It might be good to know that there is a UNIX command called `diff` that compares files.)**
@@ -21,6 +30,8 @@
 I had to add a line that caused a picture to be taken when I pressed the button on the breadboard. Before that I was only able to take a picture by pressing a button on a computer. 
 
 **b. Include a video of your working video doorbell**
+
+[Video Link](https://youtu.be/4J-cAtJFAm8)
 
 ## Part C. Make it your own
 
